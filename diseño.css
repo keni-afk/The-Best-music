@@ -1,0 +1,30 @@
+body {
+				background-color: #000000;
+}
+
+/*ENCABEZADO*/
+header{
+    padding: 5px 20px 5px 50px;
+    background-color: #af6aff;
+}
+#Navegador{
+				display: flow-root;
+}
+#Navegador a{
+				color: #ff95fc;
+				text-decoration: none;
+				margin-right: 40px;
+				font-size: 26px;
+				font-family: 'Reggae One', cursive;
+}
+#Navegador a:hover{
+				color: #000000;
+}
+.flot-izquierda{
+				float: left;
+				padding: 10px 0px 10px;
+}
+.flot-derecha{
+				float: right;
+				padding: 11px 5px 11px;
+}
