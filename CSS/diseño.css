@@ -1,5 +1,5 @@
-body {
-				background-color: #000000;
+* body {
+				background-color: #c6d826;
 }
 
 /*ENCABEZADO*/
@@ -13,7 +13,7 @@ header{
 #Navegador a{
 				color: #ff95fc;
 				text-decoration: none;
-				margin-right: 40px;
+				margin-right: 60px;
 				font-size: 26px;
 				font-family: 'Reggae One', cursive;
 }
@@ -26,5 +26,5 @@ header{
 }
 .flot-derecha{
 				float: right;
-				padding: 11px 5px 11px;
+				padding: 10px 5px 11px;
 }
