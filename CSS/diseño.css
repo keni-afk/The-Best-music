@@ -2,7 +2,8 @@
 				/*background-color:#7DD174;*/
 				padding: 0px;
 				margin: 0px;
-				font-family: 'Schoolbell' , cursive;
+				/*font-family: 'Schoolbell' , cursive;*/
+				font-family: 'Roboto', sans-serif;
 }
 
 /*ENCABEZADO*/
@@ -17,8 +18,8 @@ header{
 				color: #ece6f1;
 				text-decoration: none;
 				margin-right: 40px;
-				font-size: 29px;
-				font-family: 'Schoolbell' , cursive;
+				font-size: 22px;
+				/*font-family: 'Schoolbell' , cursive;*/
 } 
 #Navegador a:hover{
 				color: #000000;
