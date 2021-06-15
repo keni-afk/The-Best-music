@@ -1,22 +1,25 @@
  body {
-				background-color: #c6d826;
+				/*background-color:#7DD174;*/
+				padding: 0px;
+				margin: 0px;
+				font-family: 'Schoolbell' , cursive;
 }
 
 /*ENCABEZADO*/
 header{
-    padding: 4px 20px 4px 50px;
-    background-color: #af6aff;
+	padding: 5px 20px 5px 50px;
+    background-color:rgb(189, 99, 99);
 }
 #Navegador{
 				display: flow-root;
 }
 #Navegador a{
-				color: #ff95fc;
+				color: #ece6f1;
 				text-decoration: none;
-				margin-right: 60px;
-				font-size: 26px;
-				font-family: 'Reggae One', cursive;
-}
+				margin-right: 40px;
+				font-size: 29px;
+				font-family: 'Schoolbell' , cursive;
+} 
 #Navegador a:hover{
 				color: #000000;
 }
@@ -27,4 +30,19 @@ header{
 .flot-derecha{
 				float: right;
 				padding: 10px 5px 11px;
+}
+#info{
+	color: #020202;
+}
+.tilt{
+font-size: 30px;
+text-align: center;
+}
+.texto{
+	font-size: 20px;
+text-align: center;
+}
+#convert{
+font-size: 20px;
+text-align: center;
 }
