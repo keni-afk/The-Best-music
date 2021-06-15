@@ -9,20 +9,20 @@
 /*ENCABEZADO*/
 header{
 	padding: 5px 20px 5px 50px;
-    background-color:rgb(189, 99, 99);
+    background-color:rgb(208, 84, 219);
 }
 #Navegador{
 				display: flow-root;
 }
 #Navegador a{
-				color: #ece6f1;
+				color: #f0ebeb;
 				text-decoration: none;
 				margin-right: 40px;
 				font-size: 22px;
 				/*font-family: 'Schoolbell' , cursive;*/
 } 
 #Navegador a:hover{
-				color: #000000;
+				color: #020202;
 }
 .flot-izquierda{
 				float: left;
@@ -33,7 +33,7 @@ header{
 				padding: 10px 5px 11px;
 }
 #info{
-	color: #020202;
+	color: #ece6f1;
 }
 .tilt{
 font-size: 30px;
