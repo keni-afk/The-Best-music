@@ -32,13 +32,20 @@ form{
     padding: 40px 0;
     box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
     border-radius: 10px;
+    margin-right: 8em;
+    margin-left: 8em;
 }
 
 .form{
     width: 100%;
-    margin: auto;
+    /*margin-left: 10em;*/
+    
 }
-
+.form1{
+    width: 100%;
+    /*margin-right: 20em;*/
+    
+}
 form .grupo{
     position: relative;
     margin: 45px ;
