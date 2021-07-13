@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/form.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form action="" method="POST" id="form">
+        <div class="form">
+            <h1>Iniciar Sesion</h1>
+            <!-- <div class="grupo">
+                <input type="text" name="" id="name" required><span class="barra"></span>
+                <label for="">Nombre</label>
+            </div>
+            <div class="grupo">
+                <input type="text" name="" id="apellidos" required><span class="barra"></span>
+                <label for="">Apellidos</label>
+            </div> -->
+            <div class="grupo">
+                <input type="email" name="" id="email" required><span class="barra"></span>
+                <label for="">Email</label>
+            </div>
+            <div class="grupo">
+                <input type="password" name="" id="password" required><span class="barra"></span>
+                <label for="">Password</label>
+            </div>
+            <button onclick="enviar()">Enviar</button><br><br><br><br>
+            <button onclick="cerrarSesion()">CerrarSesion</button>
+
+            <!-- <button type="submit">Suscribirte</button> -->
+        </div>
+    </form>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBivug4koFD9PSVEkfEjxxGK3bqIvMQ62I",
+    authDomain: "thebestmusic-627d2.firebaseapp.com",
+    projectId: "thebestmusic-627d2",
+    storageBucket: "thebestmusic-627d2.appspot.com",
+    messagingSenderId: "146911728847",
+    appId: "1:146911728847:web:c07faba282c43303e193ba",
+    measurementId: "G-7ZPBQZSLS9"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    var displayName = user.displayName;
+    var email = user.email;
+    var emailVerified = user.emailVerified;
+    var photoURL = user.photoURL;
+    var isAnonymous = user.isAnonymous;
+    var uid = user.uid;
+    var providerData = user.providerData;
+    console.log(user);
+    //document.getElementById('login').innerHTML = "Estas Logeado  " + user.email;
+  //} else{
+    //document.getElementById('login').innerHTML = "No estas Logeado" ;
+  }
+ }); 
+
+ function ingresar() {
+      var emailL = document.getElementById('emailL').value;
+      var passwordL = document.getElementById('passwordL').value;
+      // alert(" email: " + email +" / password: " + password );
+      
+      firebase.auth().signInWithEmailAndPassword(emailL, passwordL)
+  .then((userCredential) => {
+    // Signed in
+    var user = userCredential.user;
+    // ...
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    alert(errorMessage);
+  });
+
+   }
+   function cerrarSesion () {
+    firebase.auth().signOut().then(() => {
+    console.log('salir');
+    }).catch((error) => {
+    console.log(error); 
+  });
+  }
+
+</script>
+    <!-- <script src="main.js"></script> -->
+</body>
+</html>
