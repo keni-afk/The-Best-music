@@ -26,8 +26,11 @@
             <div class="grupo">
                 <input type="password" name="" id="password" required><span class="barra"></span>
                 <label for="">Password</label>
+            <div>
+
             </div>
             <button onclick="enviar()">Enviar</button><br><br><br><br>
+            <button onclick="phoneSignIn()">Verificar número</button><br><br><br><br>
 
             <!-- <button type="submit">Suscribirte</button> -->
         </div>
@@ -131,6 +134,72 @@ function verificarCorreo() {
   });
   }
 
+  import firebase from "firebase/app";
+import "firebase/auth";
+
+// Mask the global 'window' for this snippet file
+// const window = {
+  ////recaptchaVerifier: undefined
+//};
+
+//function recaptchaVerifierInvisible() {
+  //function onSignInSubmit() {
+    // TODO(you): Implement
+  //}
+
+  // [START auth_phone_recaptcha_verifier_invisible]
+ // window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('sign-in-button', {
+   // 'size': 'invisible',
+    //'callback': (response) => {
+      // reCAPTCHA solved, allow signInWithPhoneNumber.
+     // onSignInSubmit();
+    //}
+  //});
+  // [END auth_phone_recaptcha_verifier_invisible]
+//}
+
+//function recaptchaVerifierVisible() {
+  // [START auth_phone_recaptcha_verifier_visible]
+ // window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
+    //'size': 'normal',
+    //'callback': (response) => {
+      // reCAPTCHA solved, allow signInWithPhoneNumber.
+      // ...
+    //},
+    //'expired-callback': () => {
+      // Response expired. Ask user to solve reCAPTCHA again.
+      // ...
+   // }
+  //});
+  // [END auth_phone_recaptcha_verifier_visible]
+ //}
+
+//function recaptchaVerifierSimple() {
+  // [START auth_phone_recaptcha_verifier_simple]
+ // window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+  // [END auth_phone_recaptcha_verifier_simple]
+ //}
+
+//function recaptchaRender() {
+  //** @type {firebase.auth.RecaptchaVerifier} */
+ // const recaptchaVerifier = window.recaptchaVerifier;
+
+  // [START auth_phone_recaptcha_render]
+  //recaptchaVerifier.render().then((widgetId) => {
+  //  window.recaptchaWidgetId = widgetId;
+ // });
+  // [END auth_phone_recaptcha_render]
+//}
+
+function phoneSignIn() {
+  function getPhoneNumberFromUserInput() {
+    return "+15558675309";
+  }}
+
+  // [START auth_get_recaptcha_response]
+  //const recaptchaResponse = grecaptcha.getResponse(recaptchaWidgetId);
+  // [END auth_get_recaptcha_response]
+//}
   
  function ingresar() {
       var emailL = document.getElementById('emailL').value;
