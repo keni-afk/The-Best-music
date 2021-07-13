@@ -130,6 +130,33 @@ function verificarCorreo() {
     // ...
   });
   }
+
+  
+ function ingresar() {
+      var emailL = document.getElementById('emailL').value;
+      var passwordL = document.getElementById('passwordL').value;
+      // alert(" email: " + email +" / password: " + password );
+      
+      firebase.auth().signInWithEmailAndPassword(emailL, passwordL)
+  .then((userCredential) => {
+    // Signed in
+    var user = userCredential.user;
+    // ...
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    alert(errorMessage);
+  });
+
+   }
+   function cerrarSesion () {
+    firebase.auth().signOut().then(() => {
+    console.log('salir');
+    }).catch((error) => {
+    console.log(error); 
+  });
+  }
   
 
 </script>
