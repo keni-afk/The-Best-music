@@ -3,8 +3,7 @@
 <head>
 				<meta charset="UTF-8">
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
-				<script src="https://kit.fontawesome.com/a076d05399.js"
-				 crossorigin="anonymous"></script>
+				<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
 				<link rel="stylesheet" href="./CSS/diseño.css"> 
 				<link rel="stylesheet" href="./CSS/slider.css"> 
 				<link rel="stylesheet" href="./CSS/contenido.css">
@@ -17,8 +16,25 @@
 				<title>The Best</title>
 </head>
 <body> 
-				<!-- ENCABEZADO -->
-				<header>
+				<div class="respon">
+		   <header>
+								<input type="checkbox" id="boton-menu">
+								<label for="boton-menu"> <img src="./img/icon3.png" alt=""> </label>
+								<nav class="menu">
+												<ul>
+																<li><a href="./index.html">INICIO</a></li>
+																<li><a href="./Recoms.html">RECOMENDACIONES</a></li>
+																<li><a href="./form.html">REGISTRO</a></li>
+															<!--<li><a href="">menu4</a></li>
+																<li><a href="">menu5</a></li> -->
+												</ul>
+												
+								</nav>
+				</header> 
+				
+			 <!-- ENCABEZADO -->
+			 
+			<!-- 	<header>
 								<nav id="Navegador">
 												<div class="flot-izquierda">
 																<img src="#" alt="Logo">
@@ -28,31 +44,30 @@
 																<a href="Recoms.html">RECOMENDACIONES</a>
 																<a href="form.html">REGISTRARSE</a>
 																<a href="#">INICIAR SESION</a>
-																<input type ="text" placeholder="Buscar" required>
-																<div class="btn">
-																	<i class="fas fa-search icon"></i>
-																</div>
-															</div>
+																
+												</div>
 								</nav>
-				</header>
-                <!-- SLIDER -->
+				</header> -->
+               <!-- SLIDER -->
 				<div class="container-slider">
 					<div class="slider" id="slider">
 					     <div class="slider__section">
-							 <img src="img/sld1.png" alt="" class="slider__img">
+							 <img src="img/img1.jpeg" alt="" class="slider__img">
 						 </div>
 					     <div class="slider__section">
-                             <img src="img/sld2.png" alt="" class="slider__img">
+                             <img src="img/img2.jpg" alt="" class="slider__img">
 						 </div>
 					     <div class="slider__section">
-                             <img src="img/sld3.png" alt="" class="slider__img">
+                             <img src="img/img3.png" alt="" class="slider__img">
 						 </div>
 					     <div class="slider__section">
-                             <img src="img/sld4.png" alt="" class="slider__img">
+                             <img src="img/img4.jpg" alt="" class="slider__img">
 						 </div>
 					</div>
-				<div class="slider__btn slider__btn--right" id="btn-right">&#62;</div>
-				<div class="slider__btn slider__btn--left" id="btn-left">&#60;</div>
+					
+				<!--<div class="slider__btn slider__btn--right" id="btn-right">&#62;</div>
+				<div class="slider__btn slider__btn--left" id="btn-left">&#60;</div> -->
+				
 				    </div>
                <!-- CUERPO -->
                 <!--<section id="info" class="patito">
@@ -72,9 +87,10 @@
 					 <p id="convert" onmouseover="musicaTends()">QUE TENEMOS PARA HOY?</p>
 					</section> -->
                        <!-- CARTILLAS 3D -->
+     <main>
 				<div class="contenido__video">
-					<video src="./img/video03.mp4" autoplay loop muted >
-						<source src="./img/video03.mp4" type="video/mp4">
+					<video src="./img/videoO.mp4" autoplay loop muted >
+						<source src="./img/video02.mp4" type="video/mp4">
 					</video>
 				</div>
 				<div class="container">
@@ -82,23 +98,29 @@
 						<div class="title">
 						  <h1> TOP 1 </h1>
 						</div>
-						  <a href="" class="btn">VER</a>
+						  <a href="https://youtu.be/IHQ46ZSxJ9g" class="btn">VER</a>
 			            </div>
 				    <div class="card">
 						<div class="title">
 							<h1> TOP 2 </h1> 
 						</div>
-						   <a href="" class="btn">VER</a>
+						   <a href="https://youtu.be/_wE3hDN06Qg" class="btn">VER</a>
 					    </div>
 					<div class="card">
 						<div class="title">
 							<h1> TOP 3 </h1>
 						</div>
-						   <a href="" class="btn">VER</a>
+						   <a href="https://youtu.be/CFPLIaMpGrY" class="btn">VER</a>
 					    </div>
 				</div>
-               
-					
+       </main>
+    </div>
+					<!-- <div id="public">
+									<div class="public1">
+													<div class="publici">
+													<img src="./img/imgp1.png" alt=""></img>         </div>
+									</div>
+					</div> -->
 				<script src="slider/slider.js"></script>
 </body>
 </html>
