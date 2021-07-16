@@ -30,13 +30,13 @@ function Prev() {
     }, 500); 
 }
 
-btnRight.addEventListener('click' , function(){
-    Next();
-});
+//btnRight.addEventListener('click' , function(){
+    //Next();
+//});
 
-btnLeft.addEventListener('click' , function(){
-    Prev();
-});
+//btnLeft.addEventListener('click' , function(){
+   // Prev();
+//});
 
 setInterval(function(){
     Next();
