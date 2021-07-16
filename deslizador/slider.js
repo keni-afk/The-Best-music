@@ -31,11 +31,11 @@ function Prev() {
 }
 
 //btnRight.addEventListener('click' , function(){
-    //Next();
+ //   Next();
 //});
 
 //btnLeft.addEventListener('click' , function(){
-   // Prev();
+  //  Prev();
 //});
 
 setInterval(function(){
