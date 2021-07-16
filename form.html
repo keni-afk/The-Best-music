@@ -10,15 +10,15 @@
 <body>
     <form action="" method="POST" id="form">
         <div class="form">
-            <h1>Registro</h1>
-            <!-- <div class="grupo">
+            <h1>REGISTRO</h1>
+            <div class="grupo">
                 <input type="text" name="" id="name" required><span class="barra"></span>
                 <label for="">Nombre</label>
             </div>
             <div class="grupo">
                 <input type="text" name="" id="apellidos" required><span class="barra"></span>
                 <label for="">Apellidos</label>
-            </div> -->
+            </div>
             <div class="grupo">
                 <input type="email" name="" id="email" required><span class="barra"></span>
                 <label for="">Email</label>
@@ -26,25 +26,25 @@
             <div class="grupo">
                 <input type="password" name="" id="password" required><span class="barra"></span>
                 <label for="">Password</label>
-            <div>
+            </div>
 
-           
-
-            <button type="submit">enviar</button> 
+            <button type="submit">Enviar</button>
         </div>
     </form>
     
-   <form action="" method="POST" id="form1">
+    
+    
+    <form action="" method="POST" id="form1">
         <div class="form">
             <h1>INICIAR SESION</h1>
-            <!--<div class="grupo">
+            <div class="grupo">
                 <input type="text" name="" id="name" required><span class="barra"></span>
                 <label for="">Nombre</label>
             </div>
             <div class="grupo">
                 <input type="text" name="" id="apellidos" required><span class="barra"></span>
                 <label for="">Apellidos</label>
-            </div> -->
+            </div>
             <div class="grupo">
                 <input type="email" name="" id="email" required><span class="barra"></span>
                 <label for="">Email</label>
@@ -57,177 +57,6 @@
             <button type="submit">Ingresar</button>
         </div>
     </form>
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
-
-<script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyBivug4koFD9PSVEkfEjxxGK3bqIvMQ62I",
-    authDomain: "thebestmusic-627d2.firebaseapp.com",
-    projectId: "thebestmusic-627d2",
-    storageBucket: "thebestmusic-627d2.appspot.com",
-    messagingSenderId: "146911728847",
-    appId: "1:146911728847:web:c07faba282c43303e193ba",
-    measurementId: "G-7ZPBQZSLS9"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-
-  firebase.auth().onAuthStateChanged((user) => {
-  if (user) {
-    var displayName = user.displayName;
-    var email = user.email;
-    var emailVerified = user.emailVerified;
-    var photoURL = user.photoURL;
-    var isAnonymous = user.isAnonymous;
-    var uid = user.uid;
-    var providerData = user.providerData;
-    if (emailVerified === false) {
-      texVer = "- correo no verificado";
-    } else {
-      texVer  = "- correo verificado" ;
-    }
-    console.log(user);
-    document.getElementById('login').innerHTML = `<p>Estas Logeado con el correo` + user.email + ` ` + texVer +
-      `<p> <button onclick="cerrarSesion()">CerrarSesion</button>`;
-  } else {
-    document.getElementById('login').innerHTML = "No estas Logeado" ;
-  }
-});
-
-function enviar() {
-      var email = document.getElementById('email').value;
-      var password = document.getElementById('password').value;
-      // alert(" email: " + email +" / password: " + password );
-      
-      firebase.auth().createUserWithEmailAndPassword(email, password)
- .then((userCredential) => {
-    // Signed in
-    var user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // ..
-    alert(errorMessage);
-
-  });
-}
-
-function verificarCorreo() {
-    firebase.auth().currentUser.sendEmailVerification()
-  .then(() => {
-    // Email verification sent!
-    // ...
-  });
-  }
-
-  //import firebase from "firebase/app";
-//import "firebase/auth";
-
-// Mask the global 'window' for this snippet file
-// const window = {
-  ////recaptchaVerifier: undefined
-//};
-
-//function recaptchaVerifierInvisible() {
-  //function onSignInSubmit() {
-    // TODO(you): Implement
-  //}
-
-  // [START auth_phone_recaptcha_verifier_invisible]
- // window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('sign-in-button', {
-   // 'size': 'invisible',
-    //'callback': (response) => {
-      // reCAPTCHA solved, allow signInWithPhoneNumber.
-     // onSignInSubmit();
-    //}
-  //});
-  // [END auth_phone_recaptcha_verifier_invisible]
-//}
-
-//function recaptchaVerifierVisible() {
-  // [START auth_phone_recaptcha_verifier_visible]
- // window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
-    //'size': 'normal',
-    //'callback': (response) => {
-      // reCAPTCHA solved, allow signInWithPhoneNumber.
-      // ...
-    //},
-    //'expired-callback': () => {
-      // Response expired. Ask user to solve reCAPTCHA again.
-      // ...
-   // }
-  //});
-  // [END auth_phone_recaptcha_verifier_visible]
- //}
-
-//function recaptchaVerifierSimple() {
-  // [START auth_phone_recaptcha_verifier_simple]
- // window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
-  // [END auth_phone_recaptcha_verifier_simple]
- //}
-
-//function recaptchaRender() {
-  //** @type {firebase.auth.RecaptchaVerifier} */
- // const recaptchaVerifier = window.recaptchaVerifier;
-
-  // [START auth_phone_recaptcha_render]
-  //recaptchaVerifier.render().then((widgetId) => {
-  //  window.recaptchaWidgetId = widgetId;
- // });
-  // [END auth_phone_recaptcha_render]
-//}
-
-//function phoneSignIn() {
- 
- // function getPhoneNumberFromUserInput() {
-    //return "+15558675309";
-  //}}
-
-  // [START auth_get_recaptcha_response]
-  //const recaptchaResponse = grecaptcha.getResponse(recaptchaWidgetId);
-  // [END auth_get_recaptcha_response]
-//}
-  
- function ingresar() {
-      var emailL = document.getElementById('emailL').value;
-      var passwordL = document.getElementById('passwordL').value;
-      // alert(" email: " + email +" / password: " + password );
-      
-      firebase.auth().signInWithEmailAndPassword(emailL, passwordL)
-  .then((userCredential) => {
-    // Signed in
-    var user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    alert(errorMessage);
-  });
-
-   }
-   function cerrarSesion () {
-    firebase.auth().signOut().then(() => {
-    console.log('salir');
-    }).catch((error) => {
-    console.log(error); 
-  });
-  }
-  
-
-</script>
-    <!-- <script src="main.js"></script> -->
+    <script src="main.js"></script>
 </body>
 </html>
